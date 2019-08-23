@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
+
+Route::resource('wselessons', 'WSELessonsController');
+// Route::get('/wse', 'WSELessonsController@index');
+// Route::get('/wse/create', 'WSELessonsController@create');
+// Route::get('/wse/{lesson}', 'WSELessonsController@show');
+// Route::post('/wse', 'WSELessonsController@store');
+// Route::get('/wse/{lesson}/edit', 'WSELessonsController@edit');
+// Route::patch('/wse/{lesson}', 'WSELessonsController@update');
+// Route::delete('/wse/{lesson}', 'WSELessonsController@destroy');
